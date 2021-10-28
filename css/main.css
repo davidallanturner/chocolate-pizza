@@ -1,6 +1,6 @@
 * {
-    box-sizing: border-box;
-  }
+	box-sizing: border-box;
+}
 
 body {
 	/* background-color: blue; */
@@ -10,72 +10,97 @@ body {
 }
 
 body h1 {
-font-family: 'Yellowtail', cursive;
-font-size: 30px;
+	font-family: 'Yellowtail', cursive;
+	font-size: 42px;
+}
+
+#something img {
+	height: 45px;
+	width: 40px;
 }
 
 header {
-	display: block;
-	margin:10px 0px 30px 0px;
+	display: flex;
+	justify-content: space-between;
+	margin: 40px 0px 30px 0px;
+}
+
+#something {
+	display: flex;
+	align-content: row;
 }
 
 header p {
 	font-family: 'Abel', sans-serif;
 }
 
-header > img {
-	float: left;
+.hash {
+	background-image: url('../img/hr-img.png');
+	height: 8px;
+	width: auto;
+}
+
+header>img {
 	margin: 5px;
 }
 
-
-header nav ul {
-	float: right;
+header nav {
+	display: flex;
+	align-items: row;
 }
 
 header nav ul li {
 	display: inline-block;
+	font-size: 25px;
 }
 
+header nav ul:first-child {
+	margin-right: 13px;
+}
 
-main>#border{
-	width:960px;
+main>#border {
+	width: 960px;
 	height: 15px;
 }
 
 main>article>img {
 	width: 960px;
-	
 }
 
-main>section>h2{
+main>section>div>h2 {
 	font-family: sans-serif;
 	font-size: 30px;
 }
 
-#print {
-	float: right;
+main>section {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
 }
 
 main p {
 	margin: 10px 0px;
 }
 
-main article ul{
-	display: block;
-	background-image: url(../img/list-bg.png);
+main article aside {
+	display: flex;
+	justify-content: space-around;
+	background-image: url('../img/list-bg.png');
 }
 
-#recipeIngredients {
-	float: left;
+aside ul li:not(.check)::before {
+	font-family: FontAwesome;
+	content: '\f14a';
+	height: 15px;
+}
+
+.check {
+	text-decoration: line-through;
+	padding: 0px 2px;
 }
 
 #recipeIngredients li {
 	margin: 15px;
-}
-
-#recipeIngredients2 {
-	float: right;
 }
 
 #recipeIngredients2 li {
@@ -83,16 +108,60 @@ main article ul{
 }
 
 footer {
-	float: clear;
+	margin-top: 30px;
+	margin-bottom: 80px;
 }
 
-footer > section > a {
-	display: block-inline;
+footer>section>a {
+	display: inline-block;
 	background-color: salmon;
 	text-decoration: none;
 	color: white;
-		font-family: 'Abel', sans-serif;
-		/* width: fit-content; */
-		font-size: 20px;
+	font-family: 'Abel', sans-serif;
+	font-size: 20px;
+	margin-top: 20px;
 	padding: 15px;
+}
+
+footer strong {
+	display: block;
+	font-weight: bolder;
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+#bio {
+	padding: 5px;
+	margin-top: 25px;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#bio div p {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 20px;
+	width: 590px;
+}
+
+#bio img {
+	width: 71px;
+	height: 68px;
+}
+
+footer>p {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 275px;
+}
+
+footer>img {
+	display: block;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25px;
+	margin-bottom: 20px;
 }
